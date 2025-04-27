@@ -219,7 +219,7 @@
 
 .mob-menu-nav-list {
   height: 100%;
-  background-image: url(./mob-menu-bg@1x.webp);
+  background-image: url(../img/hero/hero-bg-mob@1x.webp);
   background-repeat: no-repeat;
   background-position: center;
   display: flex;
@@ -232,7 +232,7 @@
 @media screen and (min-device-pixel-ratio: 2),
 (min-resolution:192dpi) {
   .mob-menu-nav-list {
-    background-image: url(./mob-menu-bg@2x.webp);
+    background-image: url(../img/hero/hero-bg-mob@2x.webp);
   }
 }
 
