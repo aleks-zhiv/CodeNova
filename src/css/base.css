@@ -1,22 +1,20 @@
 :root {
-  /* font-family: Inter, Avenir, Helvetica, Arial, sans-serif; */
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color: #242424;
-  background-color: rgba(255, 255, 255, 0.87);
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+  --black: #292929;
+  --accet-green: #00B068;
+  --white: #F0F0F0;
+  --light-grey: #E4E5E6;
+  --hover-grey: #BBBBBB;
+  --light-accet: #BCDFD1;
+  --hover: #009156;
+  --error: #E74A3B;
+  --font-family: "Poppins", sans-serif;
+  --second-family: "Impact", sans-serif;
+  --third-family: "Montserrat", sans-serif;
 }
 
 body {
+  background-color: var(--white);
+  transition: background-color 0.3s ease;
   display: flex;
   flex-direction: column;
   min-width: 100vw;
@@ -24,9 +22,27 @@ body {
   margin: 0;
 }
 
+body.dark-theme {
+  --white: #1E2023;
+  --black: #F0F0F0;
+  --accet-green: #14C57C;
+  --light-grey: #3B3F45;
+  --hover-grey: #5A5D63;
+  --light-accet: #204136;
+}
+
+body:has(.mobile-menu.is-open) {
+  overflow: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 main {
   flex-grow: 1;
 }
-main:has(.back-link) {
-  text-align: center;
+
+.green-text {
+  color: var(--accet-green);
 }
