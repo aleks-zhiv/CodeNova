@@ -1,19 +1,55 @@
 <header class="header">
-  <div class="container">
-    <nav class="nav">
-      <a class="nav-logo" href="./index.html" aria-label="Site logo">
-        <svg class="nav-logo-icon" width="100" height="30">
-          <use href="{=$icon-path}"></use>
-        </svg>
-      </a>
+  <div class="container header-cont">
+    <nav class="navigation">
+      <a href="/" class="logo"
+        >lloyd<span class="green-text">jefferson.</span></a
+      >
+      <input
+        class="theme-switcher-checkbox"
+        type="checkbox"
+        id="theme-switcher"
+      />
+      <label for="theme-switcher"></label>
       <ul class="nav-list">
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-act}" href="./page-2.html">Page 2</a>
+        <li class="nav-list-item">
+          <a class="nav-list-link" href="#about-me">About me</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-curr}" href="./page-3.html">Page 3</a>
+        <li class="nav-list-item">
+          <a class="nav-list-link" href="#projects">Projects</a>
+        </li>
+        <li class="nav-list-item">
+          <a class="nav-list-link" href="#contacts">Contacts</a>
         </li>
       </ul>
     </nav>
+    <button type="button" class="open-mob-menu-btn">
+      <svg class="burger-menu-icon" width="32" height="32">
+        <use href="./icons.svg#icon-burger-btn"></use>
+      </svg>
+    </button>
+  </div>
+
+  <div class="mobile-menu">
+    <div class="mob-menu-head">
+      <a href="/" class="logo"
+        >lloyd<span class="green-text">jefferson.</span></a
+      >
+      <button type="button" class="mob-menu-close-btn">
+        <svg class="mob-menu-close-icon" width="32" height="32">
+          <use href="./icons.svg#icon-close-menu-btn"></use>
+        </svg>
+      </button>
+    </div>
+    <ul class="mob-menu-nav-list">
+      <li class="mob-menu-nav-list-item">
+        <a class="mob-menu-nav-list-link" href="#about-me">About me</a>
+      </li>
+      <li class="mob-menu-nav-list-item">
+        <a class="mob-menu-nav-list-link" href="#projects">Projects</a>
+      </li>
+      <li class="mob-menu-nav-list-item">
+        <a class="mob-menu-nav-list-link" href="#contacts">Contacts</a>
+      </li>
+    </ul>
   </div>
 </header>
