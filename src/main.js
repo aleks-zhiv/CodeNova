@@ -1,0 +1,7 @@
+import '/js/benefits.js'
+import '/js/dark-theme.js'
+import '/js/faq.js'
+import '/js/my-projects.js'
+import '/js/hero.js'
+import '/js/reviews.js'
+import '/js/work.js'
