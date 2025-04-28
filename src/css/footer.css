@@ -1,6 +1,6 @@
 /* --------------- Container --------------- */
 .footer-container {
-  border-top: 1px solid var(--light-grey);
+  border-top: 1px solid var(--footer-line-color);
 }
 
 @media screen and (max-width: 767.98px) {
@@ -31,7 +31,7 @@
 /* --------------- General --------------- */
 
 .footer {
-  font-family: 'Poppins', sans-serif;
+  font-family: var(--font-family);
   color: var(--black);
   font-weight: 300;
   font-size: 16px;
@@ -43,7 +43,7 @@
 
 
 .footer-logo {
-  font-family: "Impact", sans-serif;
+  font-family: var(--second-family);
   display: block;
   font-weight: 400;
   font-size: 32px;
