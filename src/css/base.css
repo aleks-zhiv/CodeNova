@@ -10,6 +10,7 @@
   --black-modal: rgba(41, 41, 41, 0.8);
   --white-modal: #F0F0F0;
   --light-grey-form: #E4E5E6;
+  --footer-line-color: #E4E5E6;
   --font-family: "Poppins", sans-serif;
   --second-family: "Impact", sans-serif;
   --third-family: "Montserrat", sans-serif;
@@ -35,6 +36,7 @@ body.dark-theme {
   --black-modal: rgba(30, 32, 35, 0.8);
   --white-modal: #2A2D32;
   --light-grey-form: #2A2D32;
+  --footer-line-color: #F0F0F0;
 }
 
 body:has(.mobile-menu.is-open) {
