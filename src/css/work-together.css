@@ -19,6 +19,23 @@
     font-weight: 400;
 }
 
+@media screen and (min-width: 768px) {
+    body .work-together .container {
+        background-image: url("../img/work-together/bg-tbl.png");
+        background-repeat: no-repeat;
+        background-size: 336px 260px;
+        background-position: top -120px right;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    body .work-together .container {
+        background-image: url("../img/work-together/bg-desc.png");
+        background-size: 526px 408px;
+        background-position: top -116px right;
+    }
+}
+
 /* --------------- Title --------------- */
 /* #region */
 .work-together-title {
@@ -119,6 +136,7 @@
 .work-together-contacts-item {
     position: relative;
     padding-left: 40px;
+    transition: color 0.3s ease;
 }
 
 .work-together-contacts-item:hover {
@@ -144,6 +162,7 @@
 .form-input-email {
     padding: 12px 16px;
     height: 48px;
+    color: var(--black);
 }
 
 .no-valid {
@@ -217,6 +236,7 @@
     letter-spacing: 0.03em;
     text-align: center;
     color: #f0f0f0;
+    transition: background-color 0.3s ease;
 }
 
 @media screen and (min-width: 768px) {
