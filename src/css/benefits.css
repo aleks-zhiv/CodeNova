@@ -11,12 +11,12 @@
   letter-spacing: 0.03em;
   text-transform: uppercase;
   flex-shrink: 0;
-  color: #292929;
+  color: var(--black);
   margin-bottom: 40px;
 }
 
 .benefits h2 span {
-  color: #00b068;
+  color: var(--accet-green);
 }
 
 .benefits-list {
@@ -38,7 +38,7 @@
   align-items: center;
   width: 48px;
   height: 48px;
-  background-color: #bcdfd1;
+  background-color: var(--light-accet);
   border-radius: 8px;
   margin-bottom: 16px;
 }
@@ -46,7 +46,7 @@
 .benefit-item .icon svg {
   width: 24px;
   height: 24px;
-  stroke: #00b068;
+  stroke: var(--accet-green);
   fill: none;
 }
 
@@ -57,7 +57,7 @@
   line-height: 156%;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: #292929;
+  color: var(--black);
   margin-bottom: 16px;
 }
 
@@ -67,7 +67,7 @@
   font-size: 16px;
   line-height: 150%;
   letter-spacing: 0.03em;
-  color: #292929;
+  color: var(--black);
 }
 
 /* Tablet */
