@@ -1,0 +1,139 @@
+.benefits-container {
+  position: relative;
+}
+
+.benefits h2 {
+  font-family: 'Impact', sans-serif;
+  max-width: 320px;
+  font-weight: 400;
+  font-size: 52px;
+  line-height: 123%;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  flex-shrink: 0;
+  color: #292929;
+  margin-bottom: 40px;
+}
+
+.benefits h2 span {
+  color: #00b068;
+}
+
+.benefits-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.benefit-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.benefit-item .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  background-color: #bcdfd1;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.benefit-item .icon svg {
+  width: 24px;
+  height: 24px;
+  stroke: #00b068;
+  fill: none;
+}
+
+.benefit-item h3 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 156%;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #292929;
+  margin-bottom: 16px;
+}
+
+.benefit-item p {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.03em;
+  color: #292929;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .benefits h2 {
+    max-width: 704px;
+    font-size: 108px;
+    line-height: 115%;
+    letter-spacing: 0.02em;
+  }
+
+  .benefits-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  .benefits-list li:first-child {
+    margin-left: 368px;
+  }
+
+  .benefit-item {
+    width: 336px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1280px) {
+  .benefits h2 {
+    max-width: 690px;
+    max-height: 276px;
+    font-size: 108px;
+    line-height: 115%;
+    letter-spacing: 0.02em;
+    margin-bottom: 0;
+  }
+
+  .benefits-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  .benefits-list li:first-child {
+    margin-left: 832px;
+  }
+
+  .benefit-item {
+    width: 384px;
+  }
+
+  .benefits-container::after {
+    content: '';
+    position: absolute;
+    top: -116px;
+    right: 32px;
+    width: 526px;
+    height: 408px;
+    background: url('../img/decor bg 3.png') no-repeat center/cover;
+    z-index: -1;
+  }
+}
+
+@media (min-width: 1280px) and ((-webkit-min-device-pixel-ratio: 2) or (min-resolution: 192dpi)) {
+  .benefits-container::after {
+    background-image: url('../img/decor bg 3@2x.png');
+    background-size: cover;
+  }
+}
