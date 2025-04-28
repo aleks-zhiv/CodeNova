@@ -92,12 +92,5 @@ function showErrorMessange() {
     });
 }
 
-iziToast.show({
-    title: "An error occurred!",
-    message: "Correct the entered data and send again",
-    position: "center",
-    maxWidth: "300px"
-});
-
 
 

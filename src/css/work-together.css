@@ -185,6 +185,15 @@
     margin-bottom: 32px;
 }
 
+.form-input-email:-webkit-autofill {
+    box-shadow: 0 0 0px 1000px var(--light-grey-form) inset !important;
+    -webkit-box-shadow: 0 0 0px 1000px var(--light-grey-form) inset !important;
+    -webkit-text-fill-color: var(--black) !important;
+    border: none !important;
+    outline: none !important;
+    background-clip: content-box !important;
+}
+
 .form-input-email::placeholder,
 .form-message::placeholder {
     font-family: var(--font-family);
