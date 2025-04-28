@@ -1,6 +1,3 @@
-ul {
-  list-style: none;
-}
 .faq-section {
   padding: 0 20px;
 }
@@ -8,9 +5,10 @@ ul {
   text-transform: uppercase;
   font-family: var(--second-family);
   font-size: 52px;
-  letter-spacing: 1.8px;
-  line-height: 64px;
+  letter-spacing: 0.03em;
+  line-height: 1.23;
   margin-bottom: 40px;
+  color: var(--black);
 }
 
 /*!!!!!!!!!!!!!!!!!!!!! accordion!!!!!!!!!!!!!!!!!! */
@@ -22,16 +20,16 @@ ul {
 .accordion-container .ac .ac-trigger {
   font-weight: 400;
   font-size: 18px;
-  letter-spacing: 0.5px;
-  line-height: 28px;
+  letter-spacing: 0.03em;
+  line-height: 1.56;
   text-transform: uppercase;
 }
 
 .accordion-container .ac .ac-panel .ac-text {
   font-weight: 300;
   font-size: 16px;
-  letter-spacing: 0.2px;
-  line-height: 24px;
+  letter-spacing: 0.03em;
+  line-height: 1.5;
 }
 .accordion-container .ac {
   background-color: var(--white);
@@ -60,13 +58,13 @@ ul {
 @media only screen and (min-width: 768px) {
   .faq__title {
     font-size: 108px;
-    letter-spacing: 1.8px;
-    line-height: 124px;
+    letter-spacing: 0.02em;
+    line-height: 1.15;
   }
   .accordion-container .ac .ac-trigger {
     font-size: 20px;
-    letter-spacing: 0.5px;
-    line-height: 32px;
+    letter-spacing: 0.03em;
+    line-height: 1.6;
   }
 }
 
