@@ -87,6 +87,10 @@
   color: var(--accet-green);
 }
 
+.footer-social-item {
+  transition: color 0.3s ease;
+}
+
 /* --------------- Copyright --------------- */
 
 .footer-copyright {
