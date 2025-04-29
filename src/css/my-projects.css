@@ -1,0 +1,232 @@
+  
+  /* Заголовок секції */
+  .projects-title {
+    font-family: 'Impact', sans-serif;
+    font-weight: 400;
+    font-size: 52px;
+    line-height: 123%;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--black);
+    white-space: nowrap;
+    margin-bottom: 40px;
+  }
+  .black-text {
+    color: var(--black);
+  }
+  .green-text {
+    color: var(--accet-green);
+  }
+  
+  /* Список проектів */
+  .projects-list {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  /* Окремий проект */
+  .project-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  /* Картинка проекту */
+  .project-picture {
+    width: 320px;
+  }
+  .project-image {
+    width: 320px;
+    height: auto;
+    border-radius: 16px;
+    object-fit: cover;
+ 
+  }
+  
+  /* Інформація про проект */
+  .project-info {
+    width: 100%;
+    margin-top: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  /* Технології проекту */
+  .project-tech {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.03em;
+    color: var(--black);
+  }
+  
+  /* Заголовок і кнопка */
+  .project-header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+  }
+  
+  /* Заголовок проекту */
+  .title {
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 125%;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: var(--black);
+  }
+  
+  /* Обгортка кнопки */
+  .visit-button-wrapper {
+    width: 100%;
+    margin-top: 16px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  /* Кнопка Visit */
+  .visit-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 24px;
+    border-radius: 8px;
+    background-color: var(--light-grey);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.03em;
+    color: var(--black);
+    transition: background-color 0.3s ease;
+  }
+  .visit-button:hover {
+    background-color: var(--hover-grey);
+  }
+  
+  /* Кнопка Load More */
+  .load-more-btn {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid var(--accet-green);
+    color: var(--black);
+    font-family: var(--font-family);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 150%;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    padding: 0 0 4px 0;
+    cursor: pointer;
+    display: block;
+    margin: 40px auto 0 auto;
+    transition: all 0.3s ease;
+  }
+  .load-more-btn:hover,
+  .load-more-btn:focus {
+    color: var(--accet-green);
+    border-bottom-color: var(--accet-green);
+  }
+  
+  /* --- Планшетна версія --- */
+  @media (min-width: 768px) {
+  
+    .projects-title {
+      margin-bottom: 60px;
+    }
+  
+    .projects-list {
+      gap: 60px;
+    }
+  
+  
+    .project-picture {
+      width: 704px;
+    }
+  
+    .project-image {
+      width: 704px;
+      height: 404px;
+      border-radius: 24px;
+    }
+  
+    .project-info {
+      margin-top: 20px;
+      gap: 20px;
+    }
+  
+    .project-header {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    .title {
+      font-size: 36px;
+    }
+  
+    .visit-button-wrapper {
+      width: auto;
+      margin-top: 0;
+    }
+  
+    .visit-button {
+      padding: 14px 28px;
+      font-size: 18px;
+    }
+  }
+  
+  /* --- Десктопна версія --- */
+  @media (min-width: 1280px) {
+  
+    .projects-title {
+      margin-bottom: 80px;
+    }
+  
+    .projects-list {
+      gap: 80px;
+    }
+  
+    .project-picture {
+      width: 1008px;
+    }
+  
+    .project-image {
+      width: 1008px;
+      height: 580px;
+      border-radius: 32px;
+    }
+  
+    .project-info {
+      margin-top: 24px;
+      gap: 24px;
+    }
+  
+    .project-header {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    .title {
+      font-size: 40px;
+    }
+  
+    .visit-button-wrapper {
+      width: auto;
+      margin-top: 0;
+    }
+  
+    .visit-button {
+      padding: 16px 32px;
+      font-size: 20px;
+    }
+  }
+  
