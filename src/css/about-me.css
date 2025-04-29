@@ -1,0 +1,149 @@
+.container {
+  position: relative;
+}
+
+.main-title {
+  font-family: 'Impact', sans-serif;
+  max-width: 320px;
+  font-weight: 400;
+  font-size: 52px;
+  line-height: 123%;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--black);
+  margin-bottom: 40px;
+}
+
+.main-title span {
+  color: var(--accet-green);
+}
+
+.photo {
+  width: 320px;
+  height: 374px;
+  border-radius: 16px;
+}
+
+.first {
+  padding-bottom: 24px;
+}
+
+.title-bio {
+  font-family: 'Poppins', sans-serif;
+  padding-top: 40px;
+  padding-bottom: 32px;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.bio-p {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  color: var(--black);
+}
+
+ul li::marker {
+  color: var(--accet-green);
+}
+
+.info-li {
+  padding-bottom: 12px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  margin-left: 32px;
+}
+
+.info-li:last-child {
+  padding-bottom: 0;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .main-title {
+    max-width: 704px;
+    font-size: 108px;
+    line-height: 115%;
+    letter-spacing: 0.02em;
+  }
+
+  .profile-section {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+  }
+
+  .photo {
+    width: 336px;
+    height: 392px;
+    padding-top: 0;
+  }
+
+  .info-blocks {
+    display: flex;
+    flex-direction: row;
+    gap: 48px;
+  }
+
+  ul {
+    width: 336px;
+    height: auto;
+  }
+
+  .bio-section {
+    width: 336px;
+    height: auto;
+  }
+  .photo {
+    margin-top: 368px;
+  }
+  .bg-decor {
+    position: absolute;
+    top: 800px;
+    right: 20px;
+    width: 336px;
+    height: 252px;
+    background: url('./src/img/decor-bg-2.png');
+    z-index: -1;
+    pointer-events: none;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1280px) {
+  .main-title {
+    max-width: 690px;
+    font-size: 108px;
+    line-height: 115%;
+    letter-spacing: 0.02em;
+    margin-bottom: 0;
+  }
+  .profile-section {
+    justify-content: space-evenly;
+  }
+  .info-blocks {
+    justify-content: space-evenly;
+  }
+
+  .bio-section {
+    width: 488px;
+    height: auto;
+  }
+  .photo {
+    top: 272px;
+  }
+  .bg-decor {
+    top: 660px;
+    right: 50px;
+    width: 384px;
+    height: 288px;
+  }
+}
