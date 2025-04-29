@@ -5,70 +5,78 @@ import Swiper from 'swiper';
 import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
+
 const swiperCont = document.querySelector('.swiper-wrapper');
+
 async function fetchReviews() {
-    try {
+  try {
     const { data } = await axios.get(
-        'https://portfolio-js.b.goit.study/api/reviews'
+      'https://portfolio-js.b.goit.study/api/reviews'
     );
+
     if (!data || data.length === 0) {
-        renderNotFound();
+      renderNotFound();
     } else {
-        renderReviews(data);
+      renderReviews(data);
     }
-    } catch (error) {
+  } catch (error) {
     iziToast.error({
-        title: 'Error',
-        message: error.message,
-        position: 'topRight',
+      title: 'Error',
+      message: error.message,
+      position: 'topRight',
     });
-    }
+  }
 }
+
 function renderReviews(reviews) {
-    swiperCont.innerHTML = reviews
+  swiperCont.innerHTML = reviews
     .map(
-        ({ review, author, avatar_url }) => `
+      ({ review, author, avatar_url }) => `
         <div class="swiper-slide">
-            <div class="card-review">
+          <div class="card-review">
             <p class="text-review">${review}</p>
             <div class="author-review">
-                <img src="${avatar_url}" alt="${author}" class="author-avatar" />
-                <p class="author-name">${author}</p>
+              <img src="${avatar_url}" alt="${author}" class="author-avatar" />
+              <p class="author-name">${author}</p>
             </div>
-            </div>
+          </div>
         </div>
-        `
+      `
     )
     .join('');
-    swiper();
+
+  swiper();
 }
+
 function renderNotFound() {
-    swiperCont.innerHTML = `
+  swiperCont.innerHTML = `
     <div class="swiper-slide">
-        <div class="card-review">
+      <div class="card-review">
         <p class="text-review">Not found</p>
-        </div>
+      </div>
     </div>
-    `;
+  `;
 }
+
 function swiper() {
-    new Swiper('.reviews-swiper', {
+  new Swiper('.reviews-swiper', {
     modules: [Navigation],
     slidesPerView: 1,
     spaceBetween: 20,
     navigation: {
-        nextEl: '.reviews-right-btn',
-        prevEl: '.reviews-left-btn',
+      nextEl: '.reviews-right-btn',
+      prevEl: '.reviews-left-btn',
     },
     breakpoints: {
-        768: {
+      768: {
         slidesPerView: 1,
-        },
-        1280: {
+      },
+      1280: {
         slidesPerView: 2,
         spaceBetween: 32,
-        },
+      },
     },
-    });
+  });
 }
+
 fetchReviews();

@@ -107,6 +107,7 @@
 }
 
 /* ------------------- TABLET ------------------- */
+
 @media screen and (min-width: 768px) {
     .title-reviews {
         font-size: 108px;
@@ -121,6 +122,7 @@
 }
 
 /* ------------------- DESKTOP ------------------- */
+
 @media screen and (min-width: 1280px) {
     .title-reviews {
         margin-bottom: 80px;
@@ -128,10 +130,6 @@
 
     .container-icon {
         gap: 24px;
-    }
-
-    .card-review {
-        height: 248px;
     }
 
     .reviews-btn {
@@ -146,5 +144,9 @@
         line-height: 1.5;
         letter-spacing: 0.03em;
         color: var(--black);
+    }
+
+    .card-review {
+        height: 248px;
     }
 }
