@@ -21,9 +21,8 @@
   
   /* Список проектів */
   .projects-list {
-    display: flex;
-    flex-direction: column;
     gap: 40px;
+
   }
   
   /* Окремий проект */
@@ -140,6 +139,7 @@
   
     .projects-title {
       margin-bottom: 60px;
+      font-size: 108px;
     }
   
     .projects-list {
@@ -188,6 +188,7 @@
   
     .projects-title {
       margin-bottom: 80px;
+      font-size: 108px;
     }
   
     .projects-list {
