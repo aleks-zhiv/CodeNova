@@ -64,9 +64,10 @@ document.addEventListener('DOMContentLoaded', () => {
       li.classList.add('project-item');
 
       li.innerHTML = `
-        <picture class="project-picture">
-          <img src="${project.img}" alt="${project.title}" class="project-image">
-        </picture>
+       <picture class="project-picture">
+    <source srcset="${project.img2x} 2x, ${project.img1x} 1x">
+    <img src="${project.img1x}" alt="${project.title}" class="project-image">
+  </picture>
 
         <div class="project-info">
           <p class="project-tech">${project.tech}</p>
