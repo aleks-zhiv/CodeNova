@@ -1,6 +1,9 @@
 .container {
   position: relative;
 }
+.js-react-node {
+  width: 100%;
+}
 
 .main-title {
   font-family: 'Impact', sans-serif;
@@ -65,9 +68,19 @@ ul li::marker {
 .info-li:last-child {
   padding-bottom: 0;
 }
+.js-react-node {
+  width: 100%;
+  height: 244px;
+  background: url('src/img/Tech-Skills.png');
+  padding-top: 80px;
+}
 
 /* Tablet */
 @media (min-width: 768px) {
+  .js-react-node {
+    height: 280px;
+    padding-top: 124px;
+  }
   .main-title {
     max-width: 704px;
     font-size: 108px;
@@ -119,6 +132,9 @@ ul li::marker {
 
 /* Desktop */
 @media (min-width: 1280px) {
+  .js-react-node {
+    padding-top: 164px;
+  }
   .main-title {
     max-width: 690px;
     font-size: 108px;
