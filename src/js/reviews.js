@@ -1,93 +1,74 @@
+import axios from 'axios';
 import iziToast from 'izitoast';
-
-let reviewsData = []; // To store the fetched reviews
-let currentIndex = 0; // To keep track of the current reviews index
-
+import 'izitoast/dist/css/iziToast.min.css';
+import Swiper from 'swiper';
+import { Navigation } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+const swiperCont = document.querySelector('.swiper-wrapper');
 async function fetchReviews() {
     try {
-    const response = await fetch(
-        'https://portfolio-js.b.goit.study/api-docs'
+    const { data } = await axios.get(
+        'https://portfolio-js.b.goit.study/api/reviews'
     );
-    if (!response.ok) throw new Error('Помилка сервера');
-    reviewsData = await response.json();
-    console.log(reviewsData);
-    renderReviews(reviewsData); // Initial render
+    if (!data || data.length === 0) {
+        renderNotFound();
+    } else {
+        renderReviews(data);
+    }
     } catch (error) {
-    console.error(error);
     iziToast.error({
-        title: 'Помилка',
-        message: 'Not found',
+        title: 'Error',
+        message: error.message,
+        position: 'topRight',
     });
-    document.querySelector('.menu-reviews').innerHTML =
-        '<li class="menu-item-reviews">Not found</li>';
     }
 }
-
 function renderReviews(reviews) {
-    const reviewsContainer = document.querySelector('.menu-reviews');
-  reviewsContainer.innerHTML = ''; // Clear previous reviews
-
-  // Slice the current reviews to display (only 2 at a time)
-    const reviewsToDisplay = reviews.slice(currentIndex, currentIndex + 2);
-
-    reviewsToDisplay.forEach(review => {
-    const reviewItem = `
-        <li class="menu-item-reviews">
-            <p class="para-reviews">${review.review}</p>
-            <div class="container-reviews">
-            <img class="feat-icon" src="${review.avatar_url}" alt="${review.author}">
-            <p class="para-img">${review.author}</p>
+    swiperCont.innerHTML = reviews
+    .map(
+        ({ review, author, avatar_url }) => `
+        <div class="swiper-slide">
+            <div class="card-review">
+            <p class="text-review">${review}</p>
+            <div class="author-review">
+                <img src="${avatar_url}" alt="${author}" class="author-avatar" />
+                <p class="author-name">${author}</p>
             </div>
-        </li>
+            </div>
+        </div>
+        `
+    )
+    .join('');
+    swiper();
+}
+function renderNotFound() {
+    swiperCont.innerHTML = `
+    <div class="swiper-slide">
+        <div class="card-review">
+        <p class="text-review">Not found</p>
+        </div>
+    </div>
     `;
-    reviewsContainer.innerHTML += reviewItem;
-    });
-
-  updateNavigationButtons(); // Update button states based on current index
 }
-
-function updateNavigationButtons() {
-    const nextButton = document.querySelector('.icon-arrow-right');
-    const prevButton = document.querySelector('.icon-arrow-left');
-
-    // Disable "Next" if at the end of the list
-    if (currentIndex + 2 >= reviewsData.length) {
-    nextButton.classList.add('icon-disabled');
-    nextButton.classList.remove('icon-active');
-    } else {
-    nextButton.classList.remove('icon-disabled');
-    nextButton.classList.add('icon-active');
-    }
-
-    // Disable "Previous" if at the start of the list
-    if (currentIndex <= 0) {
-    prevButton.classList.add('icon-disabled');
-    prevButton.classList.remove('icon-active');
-    } else {
-    prevButton.classList.remove('icon-disabled');
-    prevButton.classList.add('icon-active');
-    }
-}
-
-function setupSVGButtonNavigation() {
-    const nextButton = document.querySelector('.icon-arrow-right');
-    const prevButton = document.querySelector('.icon-arrow-left');
-
-    nextButton.addEventListener('click', () => {
-    if (currentIndex + 2 < reviewsData.length) {
-      currentIndex += 2; // Move to the next 2 reviews
-      renderReviews(reviewsData); // Re-render with new index
-    }
-    });
-
-    prevButton.addEventListener('click', () => {
-    if (currentIndex - 2 >= 0) {
-      currentIndex -= 2; // Move to the previous 2 reviews
-      renderReviews(reviewsData); // Re-render with new index
-    }
+function swiper() {
+    new Swiper('.reviews-swiper', {
+    modules: [Navigation],
+    slidesPerView: 1,
+    spaceBetween: 20,
+    navigation: {
+        nextEl: '.reviews-right-btn',
+        prevEl: '.reviews-left-btn',
+    },
+    breakpoints: {
+        768: {
+        slidesPerView: 1,
+        },
+        1280: {
+        slidesPerView: 2,
+        spaceBetween: 32,
+        },
+    },
     });
 }
-
-// Fetch reviews and initialize navigation
 fetchReviews();
-setupSVGButtonNavigation();
