@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
     {
       img1x: '../img/projects/vyshyvanka-1x-desk.jpg',
-      img2x: '../img/projects/vyshyvanka-2x-desk.jpg',
+      img2x: '../img/projects/vyshyvanka-2x-dessk.jpg',
       tech: 'React, JavaScript, Node.js, Git',
       title: 'vyshyvanka vibes Landing Page',
       link: 'https://github.com/aleks-zhiv/CodeNova.git'
