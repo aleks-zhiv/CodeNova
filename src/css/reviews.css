@@ -1,152 +1,153 @@
 /* ------------------- MOBILE ------------------- */
 ::-webkit-scrollbar {
-    width: 5px;
-    height: 8px;
+  width: 5px;
+  height: 8px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: var(--white);
-    border-radius: 10px;
+  background-color: var(--white);
+  border-radius: 10px;
 }
 
 .reviews {
-    text-align: center;
+  text-align: center;
 }
 
 .title-reviews {
-    font-family: var(--second-family);
-    font-weight: 400;
-    font-size: 52px;
-    line-height: 1.23;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    color: var(--black);
-    margin-bottom: 40px;
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 52px;
+  line-height: 1.23;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--black);
+  margin-bottom: 40px;
 }
 
 .container-icon {
-    margin-top: 24px;
-    display: flex;
-    justify-content: flex-end;
-    gap: 16px;
+  margin-top: 24px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
 }
 
 .reviews-btn {
-    padding: 0;
-    border: 1px solid var(--black);
-    border-radius: 8px;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: background-color 0.3s ease;
+  background-color: var(--white);
+  padding: 0;
+  border: 1px solid var(--black);
+  border-radius: 8px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
 }
 
 .reviews-btn:hover {
-    background-color: var(--light-grey);
+  background-color: var(--light-grey);
 }
 
 .reviews-arrow {
-    stroke: var(--black);
-    fill: none;
+  stroke: var(--black);
+  fill: none;
 }
 
 .icon-arrow-left {
-    transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 .swiper-button-disabled {
-    pointer-events: none;
-    opacity: 0.5;
-    border-color: var(--light-grey);
-    stroke: var(--light-grey);
-    background-color: transparent;
+  pointer-events: none;
+  opacity: 0.5;
+  border-color: var(--light-grey);
+  stroke: var(--light-grey);
+  background-color: transparent;
 }
 
 .card-review {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    border-radius: 16px;
-    padding: 32px;
-    height: 368px;
-    background-color: var(--light-grey);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 16px;
+  padding: 32px;
+  height: 368px;
+  background-color: var(--light-grey);
 }
 
 .text-review {
-    font-family: var(--font-family);
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.03em;
-    color: var(--black);
-    margin-bottom: 24px;
-    text-align: left;
+  font-family: var(--font-family);
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  color: var(--black);
+  margin-bottom: 24px;
+  text-align: left;
 }
 
 .author-review {
-    display: flex;
-    align-items: center;
-    gap: 16px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
 
 .author-avatar {
-    width: 40px;
-    height: 40px;
-    border-radius: 24px;
+  width: 40px;
+  height: 40px;
+  border-radius: 24px;
 }
 
 .author-name {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  color: var(--black);
+}
+
+/* ------------------- TABLET ------------------- */
+
+@media screen and (min-width: 768px) {
+  .title-reviews {
+    font-size: 108px;
+    line-height: 1.15;
+    letter-spacing: 0.02em;
+    margin-bottom: 60px;
+  }
+
+  .card-review {
+    height: 224px;
+  }
+}
+
+/* ------------------- DESKTOP ------------------- */
+
+@media screen and (min-width: 1280px) {
+  .title-reviews {
+    margin-bottom: 80px;
+  }
+
+  .container-icon {
+    gap: 24px;
+  }
+
+  .reviews-btn {
+    width: 48px;
+    height: 48px;
+  }
+
+  .author-name {
     font-family: var(--font-family);
     font-weight: 600;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.03em;
     color: var(--black);
-}
+  }
 
-/* ------------------- TABLET ------------------- */
-
-@media screen and (min-width: 768px) {
-    .title-reviews {
-        font-size: 108px;
-        line-height: 1.15;
-        letter-spacing: 0.02em;
-        margin-bottom: 60px;
-    }
-
-    .card-review {
-        height: 224px;
-    }
-}
-
-/* ------------------- DESKTOP ------------------- */
-
-@media screen and (min-width: 1280px) {
-    .title-reviews {
-        margin-bottom: 80px;
-    }
-
-    .container-icon {
-        gap: 24px;
-    }
-
-    .reviews-btn {
-        width: 48px;
-        height: 48px;
-    }
-
-    .author-name {
-        font-family: var(--font-family);
-        font-weight: 600;
-        font-size: 16px;
-        line-height: 1.5;
-        letter-spacing: 0.03em;
-        color: var(--black);
-    }
-
-    .card-review {
-        height: 248px;
-    }
+  .card-review {
+    height: 248px;
+  }
 }

@@ -8,50 +8,50 @@ document.addEventListener('DOMContentLoaded', () => {
       img2x: '../img/projects/power-2x-desk.jpg',
       tech: 'React, JavaScript, Node.js, Git',
       title: 'power pulse webservice',
-      link: 'https://github.com/aleks-zhiv/CodeNova.git'
+      link: 'https://github.com/aleks-zhiv/CodeNova.git',
     },
     {
       img1x: '../img/projects/mimino-1x-desk.jpg',
       img2x: '../img/projects/mimino-2x-desk.jpg',
       tech: 'React, JavaScript, Node.js, Git',
       title: 'mimino website',
-      link: 'https://github.com/aleks-zhiv/CodeNova.git'
+      link: 'https://github.com/aleks-zhiv/CodeNova.git',
     },
     {
       img1x: '../img/projects/vyshyvanka-1x-desk.jpg',
       img2x: '../img/projects/vyshyvanka-2x-dessk.jpg',
       tech: 'React, JavaScript, Node.js, Git',
       title: 'vyshyvanka vibes Landing Page',
-      link: 'https://github.com/aleks-zhiv/CodeNova.git'
+      link: 'https://github.com/aleks-zhiv/CodeNova.git',
     },
     {
       img1x: '../img/projects/chego-1x-desk.jpg',
       img2x: '../img/projects/chego-2x-desk.jpg',
       tech: 'React, JavaScript, Node.js, Git',
       title: 'chego jewelry website',
-      link: 'https://github.com/aleks-zhiv/CodeNova.git'
+      link: 'https://github.com/aleks-zhiv/CodeNova.git',
     },
     {
       img1x: '../img/projects/energy-1x-desk.jpg',
       img2x: '../img/projects/energy-2x-desk.jpg',
       tech: 'React, JavaScript, Node.js, Git',
       title: 'energy flow webservice',
-      link: 'https://github.com/aleks-zhiv/CodeNova.git'
+      link: 'https://github.com/aleks-zhiv/CodeNova.git',
     },
     {
       img1x: '../img/projects/fruitbox-1x-desk.jpg',
       img2x: '../img/projects/fruitbox-2x-desk.jpg',
       tech: 'React, JavaScript, Node.js, Git',
       title: 'fruitbox online store',
-      link: 'https://github.com/aleks-zhiv/CodeNova.git'
+      link: 'https://github.com/aleks-zhiv/CodeNova.git',
     },
     {
       img1x: '../img/projects/starlight-1x-desk.jpg',
       img2x: '../img/projects/starlight-2x-desk.jpg',
       tech: 'React, JavaScript, Node.js, Git',
       title: 'starlight studio landing page',
-      link: 'https://github.com/aleks-zhiv/CodeNova.git'
-    }
+      link: 'https://github.com/aleks-zhiv/CodeNova.git',
+    },
   ];
 
   let projectIndex = 0;
@@ -76,9 +76,12 @@ document.addEventListener('DOMContentLoaded', () => {
 <div class="visit-button-wrapper">
     <a href="${project.link}" target="_blank" class="visit-button">
      Visit
-     <svg class="visit-icon" width="24" height="24">
-          <use href="./img/icons.svg#icon-visit"></use>
-    </svg>
+     <img
+                  width="24"
+                  height="24"
+                  src="../img/projects/icon.png"
+                  alt=""
+                />
     </a>
 </div>
           </div>
