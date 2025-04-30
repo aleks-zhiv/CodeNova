@@ -24,9 +24,9 @@
   display: flex;
   flex-direction: column;
 }
-/* .visit-icon {
-  fill: red;
-} */
+.visit-icon {
+  stroke: var(--accet-green);
+}
 /* Окремий проект */
 .project-item {
   position: relative;
