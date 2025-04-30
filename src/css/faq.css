@@ -33,11 +33,13 @@
 }
 .accordion-container .ac {
   background-color: var(--white);
+  border: none;
   border-bottom: 1px solid var(--light-grey);
   padding: 28px 24px;
   margin: 0;
 }
 .accordion-container .ac .ac-trigger::after {
+  fill: var(--black);
   content: '' !important;
   background-image: url('../img/faq/Icon.svg');
   width: 24px;

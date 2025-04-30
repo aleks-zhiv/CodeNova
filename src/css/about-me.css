@@ -25,6 +25,7 @@
 }
 
 .title-bio {
+  color: var(--black);
   font-family: 'Poppins', sans-serif;
   padding-top: 40px;
   padding-bottom: 32px;
@@ -44,7 +45,10 @@
   color: var(--black);
 }
 
-ul li::marker {
+.info-ul {
+  list-style-type: disc;
+}
+.info-li::marker {
   color: var(--accet-green);
 }
 
@@ -56,6 +60,7 @@ ul li::marker {
   line-height: 24px;
   letter-spacing: 0.5px;
   margin-left: 32px;
+  color: var(--black);
 }
 
 .info-li:last-child {
@@ -64,6 +69,19 @@ ul li::marker {
 
 /* Tablet */
 @media (min-width: 768px) {
+  .about-me-con {
+    position: relative;
+  }
+  .about-me-con::after {
+    content: '';
+    width: 342px;
+    height: 252px;
+    background-image: url('../img/decor-bg-2.png');
+    position: absolute;
+    z-index: -1;
+    right: 50px;
+    bottom: 100px;
+  }
   .main-title {
     max-width: 704px;
     font-size: 108px;
@@ -88,8 +106,7 @@ ul li::marker {
     flex-direction: row;
     gap: 48px;
   }
-
-  ul {
+  .info-ul {
     width: 336px;
     height: auto;
   }
@@ -115,6 +132,10 @@ ul li::marker {
 
 /* Desktop */
 @media (min-width: 1280px) {
+  .about-me-con::after {
+    right: 100px;
+    bottom: 270px;
+  }
   .main-title {
     max-width: 690px;
     font-size: 108px;
