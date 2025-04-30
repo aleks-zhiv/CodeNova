@@ -1,53 +1,55 @@
+import sprite from '../img/icons.svg';
+
 document.addEventListener('DOMContentLoaded', () => {
   const projectsContainer = document.querySelector('.projects-list');
   const loadMoreBtn = document.querySelector('.load-more-btn');
 
   const newProjects = [
     {
-      img1x: './img/projects/power-1x-desk.jpg',
-      img2x: './img/projects/power-2x-desk.jpg',
+      img1x: '/img/projects/power-1x-desk.jpg',
+      img2x: '/img/projects/power-2x-desk.jpg',
       tech: 'React, JavaScript, Node.js, Git',
       title: 'power pulse webservice',
       link: 'https://github.com/aleks-zhiv/CodeNova.git',
     },
     {
-      img1x: './img/projects/mimino-1x-desk.jpg',
-      img2x: './img/projects/mimino-2x-desk.jpg',
+      img1x: '/img/projects/mimino-1x-desk.jpg',
+      img2x: '/img/projects/mimino-2x-desk.jpg',
       tech: 'React, JavaScript, Node.js, Git',
       title: 'mimino website',
       link: 'https://github.com/aleks-zhiv/CodeNova.git',
     },
     {
-      img1x: './img/projects/vyshyvanka-1x-desk.jpg',
-      img2x: './img/projects/vyshyvanka-2x-dessk.jpg',
+      img1x: '/img/projects/vyshyvanka-1x-desk.jpg',
+      img2x: '/img/projects/vyshyvanka-2x-dessk.jpg',
       tech: 'React, JavaScript, Node.js, Git',
       title: 'vyshyvanka vibes Landing Page',
       link: 'https://github.com/aleks-zhiv/CodeNova.git',
     },
     {
-      img1x: './img/projects/chego-1x-desk.jpg',
-      img2x: './img/projects/chego-2x-desk.jpg',
+      img1x: '/img/projects/chego-1x-desk.jpg',
+      img2x: '/img/projects/chego-2x-desk.jpg',
       tech: 'React, JavaScript, Node.js, Git',
       title: 'chego jewelry website',
       link: 'https://github.com/aleks-zhiv/CodeNova.git',
     },
     {
-      img1x: './img/projects/energy-1x-desk.jpg',
-      img2x: './img/projects/energy-2x-desk.jpg',
+      img1x: '/img/projects/energy-1x-desk.jpg',
+      img2x: '/img/projects/energy-2x-desk.jpg',
       tech: 'React, JavaScript, Node.js, Git',
       title: 'energy flow webservice',
       link: 'https://github.com/aleks-zhiv/CodeNova.git',
     },
     {
-      img1x: './img/projects/fruitbox-1x-desk.jpg',
-      img2x: './img/projects/fruitbox-2x-desk.jpg',
+      img1x: '/img/projects/fruitbox-1x-desk.jpg',
+      img2x: '/img/projects/fruitbox-2x-desk.jpg',
       tech: 'React, JavaScript, Node.js, Git',
       title: 'fruitbox online store',
       link: 'https://github.com/aleks-zhiv/CodeNova.git',
     },
     {
-      img1x: './img/projects/starlight-1x-desk.jpg',
-      img2x: './img/projects/starlight-2x-desk.jpg',
+      img1x: '/img/projects/starlight-1x-desk.jpg',
+      img2x: '/img/projects/starlight-2x-desk.jpg',
       tech: 'React, JavaScript, Node.js, Git',
       title: 'starlight studio landing page',
       link: 'https://github.com/aleks-zhiv/CodeNova.git',
@@ -77,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
     <a href="${project.link}" target="_blank" class="visit-button">
      Visit
      <svg class="visit-icon" width="24" height="24">
-                  <use href="./img/icons.svg#icon-visit"></use>
+                  <use href="${sprite}#icon-visit"></use>
                 </svg>
     </a>
 </div>
