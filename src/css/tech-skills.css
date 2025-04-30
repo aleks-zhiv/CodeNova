@@ -1,0 +1,143 @@
+.innerLine {
+    display: flex;
+}
+
+.topline {
+    flex-shrink: 0;
+    margin: 0;
+    min-width: 100%;
+    white-space: nowrap;
+    /* Анімація, яка зсуває рядок повністю вліво */
+    animation-name: marqueeLine;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 1.25;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: #292929;
+    padding: 32px 0;
+
+}
+
+.marquee {
+    overflow: hidden;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-size: 34px;
+    text-transform: uppercase;
+    background-color: #bcdfd1;
+    color: #000;
+    white-space: nowrap;
+    height: 104px;
+    position: relative;
+}
+
+.marquee:not(.marquee--tilted) {
+    z-index: 2;
+}
+
+.marquee.marquee--tilted {
+    z-index: 1;
+    margin-top: -1px;
+}
+
+.topline svg {
+    vertical-align: middle;
+    margin: 8px 16px;
+}
+
+.topline.bottom {
+    color: #00b068;
+}
+
+@keyframes marqueeLine {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+/* Прихований заголовок для краулерів */
+.hidden-title {
+    position: absolute;
+    left: -9999px;
+    top: -9999px;
+}
+
+.marquee--tilted {
+    background: #e4e5e6;
+    /* Змінено нахил на протилежний напрямок */
+    transform: rotate(2deg);
+    transform-origin: top left;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 1.25;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: #00b068;
+}
+
+@media only screen and (min-width: 768px) {
+    .container {
+        max-width: 768px;
+        padding: 0 32px;
+    }
+
+    section {
+        margin-bottom: 124px;
+    }
+}
+
+
+.topline {
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 1.33333;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    color: #292929;
+    padding: 40px 0;
+}
+
+
+.marquee {
+    height: 128px;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 1.33333;
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    color: #292929;
+}
+
+.topline svg {
+    margin: 12px 16px;
+}
+
+.marquee--tilted {
+    font-size: 36px;
+    line-height: 1.33333;
+    letter-spacing: 0.01em;
+}
+
+.marquee.marquee--tilted {
+    z-index: 1;
+    margin-top: -10px;
+}
+@media only screen and (min-width: 1280px) {
+    .container {
+        max-width: 1280px;
+    }
+
+    section {
+        margin-bottom: 164px;
+    }
+}
