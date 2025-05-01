@@ -1,47 +1,63 @@
+.about-me-con{
+  position: relative;
+}
+
 .main-title {
   font-family: 'Impact', sans-serif;
-  max-width: 320px;
   font-weight: 400;
-  font-size: 64px;
-  line-height: 125%;
+  font-size: 52px;
+  line-height: 1.23;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--black);
   margin-bottom: 40px;
 }
 
-.main-title span {
-  color: var(--accet-green);
+.profile-section{
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.about-content{
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 
 .photo {
-  max-width: 320px;
-  height: 374px;
+  width: 320px;
   border-radius: 16px;
 }
 
+.about-edrole-list{
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
 .first {
-  padding-bottom: 24px;
+  margin-bottom: 24px;
 }
 
 .title-bio {
   color: var(--black);
   font-family: 'Poppins', sans-serif;
-  padding-top: 40px;
-  padding-bottom: 32px;
   font-weight: 500;
   font-size: 32px;
-  line-height: 40px;
-  letter-spacing: 0.5px;
+  line-height: 1.25;
+  letter-spacing: 0.02em;
   text-transform: uppercase;
+  margin-bottom: 32px;
 }
 
 .bio-p {
   font-family: 'Poppins', sans-serif;
   font-weight: 300;
   font-size: 16px;
-  line-height: 24px;
-  letter-spacing: 0.5px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
   color: var(--black);
 }
 
@@ -52,26 +68,25 @@
   color: var(--accet-green);
 }
 
+
+.info-ul{
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
 .info-li {
-  padding-bottom: 12px;
   font-family: 'Poppins', sans-serif;
   font-weight: 300;
   font-size: 16px;
-  line-height: 24px;
-  letter-spacing: 0.5px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
   margin-left: 32px;
   color: var(--black);
 }
 
-.info-li:last-child {
-  padding-bottom: 0;
-}
-
 /* Tablet */
 @media (min-width: 768px) {
-  .about-me-con {
-    position: relative;
-  }
   .about-me-con::after {
     content: '';
     width: 342px;
@@ -79,13 +94,13 @@
     background-image: url('../img/decor-bg-2.png');
     position: absolute;
     z-index: -1;
-    right: 50px;
-    bottom: 100px;
+    right: 32px;
+    bottom: 156px;
   }
+
   .main-title {
-    max-width: 704px;
     font-size: 108px;
-    line-height: 115%;
+    line-height: 1.15;
     letter-spacing: 0.02em;
   }
 
@@ -96,71 +111,73 @@
   }
 
   .photo {
+    margin-top: 368px;
     width: 336px;
-    height: 392px;
-    padding-top: 0;
+    flex-shrink: 0;
   }
 
-  .info-blocks {
+  .about-content {
     display: flex;
     flex-direction: row;
-    gap: 48px;
-  }
-  .info-ul {
-    width: 336px;
-    height: auto;
+    gap: 32px;
+    align-items: flex-start;
   }
 
-  .bio-section {
-    width: 336px;
-    height: auto;
+  .about-bio{
+    flex: 1;
   }
-  .photo {
-    margin-top: 368px;
+
+  .about-edrole {
+    width: 100%;
   }
-  .bg-decor {
-    position: absolute;
-    top: 800px;
-    right: 20px;
-    width: 336px;
-    height: 252px;
-    background: url('./src/img/decor-bg-2.png');
-    z-index: -1;
-    pointer-events: none;
+
+  .about-edrole-list {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    margin-top: 60px;
+  }
+  
+  .about-edrole-list .about-list-item {
+    flex: 1;
   }
 }
 
 /* Desktop */
 @media (min-width: 1280px) {
   .about-me-con::after {
-    right: 100px;
-    bottom: 270px;
-  }
-  .main-title {
-    max-width: 690px;
-    font-size: 108px;
-    line-height: 115%;
-    letter-spacing: 0.02em;
-    margin-bottom: 0;
-  }
-  .profile-section {
-    justify-content: space-evenly;
-  }
-  .info-blocks {
-    justify-content: space-evenly;
+      bottom: 264px;
+  } 
+  
+  .photo {
+    margin-top: 272px;
+    margin-left: 208px;
+    width: 384px;
   }
 
-  .bio-section {
-    width: 488px;
-    height: auto;
+  .about-content {
+    display: flex;
+    flex-direction: row;
+    gap: 136px;
+    align-items: flex-start;
   }
-  .photo {
-    top: 272px;
+  
+  .about-bio {
+    max-width: 488px;
   }
-  .bg-decor {
-    top: 660px;
-    right: 50px;
-    width: 384px;
-    height: 288px;
+
+  .about-edrole {
+    margin-left: 208px;
   }
+  
+    .about-edrole-list {
+      display: flex;
+      flex-direction: row;
+      gap: 136px;
+      margin-top: 80px;
+    }
+  
+    .about-list-item {
+      max-width: 384px;
+    }
 }

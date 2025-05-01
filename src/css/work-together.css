@@ -258,6 +258,10 @@
 .work-together-btn:hover {
     background-color: var(--hover);
 }
+
+.error-border {
+    outline: 1px solid var(--error);
+}
 /* #endregion */
 
 /* --------------- Modal --------------- */
