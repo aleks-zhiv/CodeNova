@@ -2,29 +2,32 @@
     margin-bottom: 16px;
 }
 
-.hero-pict {
-    display: none;
+.hero-bg-img {
+    position: relative;
+    overflow: hidden;
 }
 
-.hero-bg-img{
-    background-image: url('../img/hero/hero-bg-mob@1x.webp');
-    background-repeat: no-repeat;
-    background-size: contain;
+.hero-bg-img-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: -1;
+    object-fit: cover;
+}
+
+.hero-content {
+    position: relative;
     padding-top: 96px;
     padding-bottom: 56px;
-}
-
-@media screen and (min-device-pixel-ratio: 2),
-(min-resolution:192dpi) {
-    .hero-bg-img {
-        background-image: url('../img/hero/hero-bg-mob@2x.webp');
-    }
+    z-index: 1;
 }
 
 .hero-title {
     font-family: var(--second-family);
     font-weight: 400;
-    font-size: 64px;
+    font-size: 60px;
     line-height: 1.25;
     letter-spacing: 0.03em;
     text-transform: uppercase;
@@ -83,6 +86,10 @@
     color: var(--black);
 }
 
+.hero-pict {
+    display: none;
+}
+
 .hero-social-media {
     padding: 32px 0;
     background-color: var(--light-grey);
@@ -114,19 +121,9 @@
 }
 
 @media screen and (min-width: 768px) {
-    .hero-bg-img{
-        background-image: url('../img/hero/hero-bg-tab@1x.webp');
-        background-repeat: no-repeat;
-        background-size: contain;
+    .hero-content {
         padding-top: 72px;
         padding-bottom: 64px;
-    }
-
-    @media screen and (min-device-pixel-ratio: 2),
-    (min-resolution:192dpi) {
-        .hero-bg-img {
-            background-image: url('../img/hero/hero-bg-tab@2x.webp');
-        }
     }
 
     .hero-title {
@@ -161,11 +158,19 @@
 
     .hero-social-media {
         padding: 40px 0;
-        background-color: var(--light-grey);
     }
 }
 
 @media screen and (min-width: 1280px) {
+    .hero-content {
+        padding-top: 72px;
+        padding-bottom: 80px;
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 72px;
+        row-gap: 80px;
+    }
+
     .hero-pict {
         display: block;
     }
@@ -174,22 +179,6 @@
         font-size: 124px;
         line-height: 1.19;
         max-width: 552px;
-    }
-
-    .hero-bg-img {
-        background-image: url('../img/hero/hero-bg-desc@1x.webp');
-        padding-bottom: 80px;
-        display: flex;
-        flex-wrap: wrap;
-        column-gap: 72px;
-        row-gap: 80px;
-    }
-
-    @media screen and (min-device-pixel-ratio: 2),
-    (min-resolution:192dpi) {
-        .hero-bg-img {
-            background-image: url('../img/hero/hero-bg-desc@1x.webp');
-        }
     }
 
     .hero-btn {
