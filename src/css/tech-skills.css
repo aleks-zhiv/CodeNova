@@ -11,7 +11,7 @@
   animation-duration: 5s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
-  font-family: 'Poppins', sans-serif;
+  font-family: var(--font-family);
   font-weight: 500;
   font-size: 32px;
   line-height: 1.25;
@@ -22,7 +22,7 @@
 }
 .marquee {
   overflow: hidden;
-  font-family: 'Poppins', sans-serif;
+  font-family: var(--font-family);
   font-weight: 600;
   font-size: 34px;
   text-transform: uppercase;
@@ -65,7 +65,7 @@
   /* Змінено нахил на протилежний напрямок */
   transform: rotate(2deg);
   transform-origin: top left;
-  font-family: 'Poppins', sans-serif;
+  font-family: var(--font-family);
   font-weight: 500;
   font-size: 32px;
   line-height: 1.25;
@@ -79,7 +79,7 @@
   line-height: 1.33;
   letter-spacing: 0.01em;
   text-transform: uppercase;
-  color: var(-black);
+  color: var(--black);
   padding: 40px 0;
 }
 .marquee {

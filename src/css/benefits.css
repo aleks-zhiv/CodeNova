@@ -3,7 +3,7 @@
 }
 
 .benefits h2 {
-  font-family: 'Impact', sans-serif;
+  font-family: var(--second-family);
   max-width: 320px;
   font-weight: 400;
   font-size: 52px;
@@ -51,7 +51,7 @@
 }
 
 .benefit-item h3 {
-  font-family: 'Poppins', sans-serif;
+  font-family: var(--font-family);
   font-weight: 400;
   font-size: 18px;
   line-height: 156%;
@@ -62,7 +62,7 @@
 }
 
 .benefit-item p {
-  font-family: 'Poppins', sans-serif;
+  font-family: var(--font-family);
   font-weight: 300;
   font-size: 16px;
   line-height: 150%;

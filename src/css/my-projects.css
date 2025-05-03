@@ -1,6 +1,6 @@
 /* Заголовок секції */
 .projects-title {
-  font-family: 'Impact', sans-serif;
+  font-family: var(--second-family);
   font-weight: 400;
   font-size: 52px;
   line-height: 123%;
