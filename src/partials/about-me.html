@@ -3,7 +3,23 @@
     <h2 class="main-title">ABOUT <span class="green-text">ME</span></h2>
     <div class="profile-section">
         <div class="about-content">
-            <img src="./img/img-about.png" alt="Lloyd Jefferson" class="photo"/>
+            <picture>
+              <source srcset="
+                      ./img/about-me/about-desc@1x.webp 1x,
+                      ./img/about-me/about-desc@2x.webp 2x
+                    " media="(min-width: 1280px)" />
+              <source srcset="
+                      ./img/about-me/about-tab@1x.webp 1x,
+                      ./img/about-me/about-tab@2x.webp 2x
+                    " media="(min-width: 768px)" />
+              <source srcset="
+                      ./img/about-me/about-mob@1x.webp 1x,
+                      ./img/about-me/about-mob@2x.webp 2x
+                    " media="(max-width: 767px)" />
+              <img src="./img/about-me/about-mob@1x.webp" 
+              alt="Lloyd Jefferson hold laptop" class="photo" 
+              />
+            </picture>
             <div class="about-bio">
               <h3 class="title-bio">BIO</h3>
               <p class="bio-p first">

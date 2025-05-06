@@ -89,14 +89,22 @@
 @media (min-width: 768px) {
   .about-me-con::after {
     content: '';
-    width: 342px;
+    width: 336px;
     height: 252px;
-    background-image: url('../img/decor-bg-2.png');
+    background-image: url('../img/about-me/about-bg@1x.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
     position: absolute;
     z-index: -1;
     right: 32px;
     bottom: 156px;
   }
+
+  @media screen and (min-device-pixel-ratio: 2),(min-resolution:192dpi) {
+      .about-me-con::after {
+        background-image: url('../img/about-me/about-bg@2x.webp');
+      }
+    }
 
   .main-title {
     font-size: 108px;
@@ -146,6 +154,8 @@
 /* Desktop */
 @media (min-width: 1280px) {
   .about-me-con::after {
+      width: 384px;
+      height: 288px;
       bottom: 264px;
   } 
   
